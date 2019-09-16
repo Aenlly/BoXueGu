@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/register_bg"
-    tools:context=".RegisterActivity"
-    android:orientation="vertical">
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:background="@drawable/register_bg">
     <include layout="@layout/main_title_bar" />
     <ImageView
         android:layout_width="70dp"
@@ -50,25 +50,8 @@
         android:textColorHint="#a3a3a3"
         android:textSize="14sp"/>
 
-    <EditText
-        android:id="@+id/et_pwd_again"
-        android:layout_width="fill_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginRight="35dp"
-        android:background="@drawable/register_psw_again_bg"
-        android:drawableLeft="@drawable/psw_icon"
-        android:drawablePadding="10dp"
-        android:gravity="center_vertical"
-        android:padding="8dp"
-        android:singleLine="true"
-        android:hint="请再次输入密码"
-        android:textColor="#000000"
-        android:textColorHint="#a3a3a3"
-        android:textSize="14sp"/>
-
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_login"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="35dp"
@@ -76,7 +59,36 @@
         android:layout_marginTop="35dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/register_selector"
-        android:text="注 册"
+        android:text="登 录"
         android:textColor="#ffffff"
         android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="35dp"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:gravity="center_horizontal"
+            android:text="立即注册"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tv_find_psw"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="忘记密码？"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
 </LinearLayout>

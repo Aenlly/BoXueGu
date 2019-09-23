@@ -74,11 +74,17 @@ public class RegisterActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(RegisterActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
 
-                    saveRegisterInfo(userName,pwd);
-                    Intent data=new Intent();
-                    data.putExtra("userName",userName);
-                    setResult(RESULT_OK,data);
-                    RegisterActivity.this.finish();
+                    String md5pwd= MD5Utils.md5(pwd);
+                    SharedPreferences sharedPreferences=getSharedPreferences("loginInfo",MODE_PRIVATE);
+
+                    SharedPreferences.Editor editor=sharedPreferences.edit();
+
+                    editor.putString(userName,md5pwd);
+                    editor.commit();
+
+                    Intent intent=new Intent();
+                    intent.putExtra("userName",userName);
+                    intent.putExtra("pwd",pwd);
                 }
             }
         });
@@ -100,13 +106,13 @@ public class RegisterActivity extends AppCompatActivity {
         return has_userName;
     }
 
-    private void saveRegisterInfo(String username,String pwd){
-        String md5pwd= MD5Utils.md5(pwd);
-        SharedPreferences sharedPreferences=getSharedPreferences("loginInfo",MODE_PRIVATE);
-
-        SharedPreferences.Editor editor=sharedPreferences.edit();
-
-        editor.putString(username,md5pwd);
-        editor.commit();
-    }
+//    private void saveRegisterInfo(String username,String pwd){
+//        String md5pwd= MD5Utils.md5(pwd);
+//        SharedPreferences sharedPreferences=getSharedPreferences("loginInfo",MODE_PRIVATE);
+//
+//        SharedPreferences.Editor editor=sharedPreferences.edit();
+//
+//        editor.putString(username,md5pwd);
+//        editor.commit();
+//    }
 }

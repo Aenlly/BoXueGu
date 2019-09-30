@@ -1,9 +1,12 @@
 package boxuegu.com.boxuegu.view;
 
 import android.app.Activity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Toast;
 
+import boxuegu.com.boxuegu.MainActivity;
 import boxuegu.com.boxuegu.R;
 
 public class MyInfoView {
@@ -17,4 +20,5 @@ public class MyInfoView {
     public View getView() {
         return view;
     }
+
 }

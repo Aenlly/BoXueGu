@@ -6,11 +6,11 @@ import android.view.View;
 
 import boxuegu.com.boxuegu.R;
 
-public class BootomBar {
+public class CourseView {
     private View view;
-    public BootomBar(Activity context){
+    public CourseView(Activity context){
         LayoutInflater layoutInflater=LayoutInflater.from(context);
-        view=layoutInflater.inflate(R.layout.bottom_bar,null);
+        view=layoutInflater.inflate(R.layout.middle,null);//加载课程的模块中间布局
 
     }
 

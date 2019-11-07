@@ -1,35 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
     <LinearLayout
         android:id="@+id/top_title_bar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
     </LinearLayout>
-
+    
     <FrameLayout
         android:id="@+id/main_boy"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/top_title_bar"
-        android:layout_above="@id/main_bottom_bar"
         android:background="#ffffff">
-
 
     </FrameLayout>
 
     <LinearLayout
-        android:id="@+id/main_bottom_bar"
+        android:id="@+id/mian_bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical">
+
     </LinearLayout>
 
 </RelativeLayout>

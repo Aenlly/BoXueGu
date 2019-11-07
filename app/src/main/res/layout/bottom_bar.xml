@@ -8,6 +8,7 @@
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="55dp"
+        android:paddingTop="3dp"
         android:layout_weight="1">
         <ImageView
             android:id="@+id/bottom_bar_image_course"
@@ -33,6 +34,7 @@
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="55dp"
+        android:paddingTop="3dp"
         android:layout_weight="1">
         <ImageView
             android:id="@+id/bottom_bar_image_exercises"
@@ -58,6 +60,7 @@
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="55dp"
+        android:paddingTop="3dp"
         android:layout_weight="1">
         <ImageView
             android:id="@+id/bottom_bar_image_myinfo"

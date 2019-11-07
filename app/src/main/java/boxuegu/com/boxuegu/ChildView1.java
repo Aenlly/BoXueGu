@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import boxuegu.com.boxuegu.R;
+
 public class ChildView1 {
     private View view;
     private Activity context;

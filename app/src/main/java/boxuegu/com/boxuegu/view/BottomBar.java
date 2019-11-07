@@ -1,4 +1,4 @@
-package boxuegu.com.boxuegu;
+package boxuegu.com.boxuegu.view;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -10,10 +10,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import boxuegu.com.boxuegu.R;
-import boxuegu.com.boxuegu.view.CourseView;
-import boxuegu.com.boxuegu.view.ExercisesView;
-import boxuegu.com.boxuegu.view.MyInfoView;
-import boxuegu.com.boxuegu.view.TitleBar;
 
 public class BottomBar {
 
@@ -34,6 +30,10 @@ public class BottomBar {
     private int selected[]={R.drawable.main_course_icon_selected,R.drawable.main_exercises_icon_selected,R.drawable.main_my_icon_selected};
 
     private int currentSelected;//用户选中某个选项之前选中的项目
+
+    public void setLoginStatus(String name){
+        myInfoView.setLoninStatus(name);
+    }
 
     private void setDefaultView(){
         //显示加载默认的标题栏和中间部分
@@ -149,11 +149,13 @@ public class BottomBar {
         }
     }
 
+
+
     public BottomBar(final Activity context){
         this.context=context;
 
-        top_title_bar=context.findViewById(R.id.top_title_bar);//加载标题布局
-        main_boy=context.findViewById(R.id.main_boy);//加载底部导航栏布局
+        top_title_bar=context.findViewById(R.id.top_title_bar);
+        main_boy=context.findViewById(R.id.main_boy);
 
         LayoutInflater layoutInflater=LayoutInflater.from(context);
         view=layoutInflater.inflate(R.layout.bottom_bar,null);

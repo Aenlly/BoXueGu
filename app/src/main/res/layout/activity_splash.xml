@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/launch_bg">
+
     <TextView
+        android:id="@+id/tv_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="V1.0"
-        android:id="@+id/text_v"
+        android:text="V"
         android:layout_centerInParent="true"
         android:textSize="14sp"/>
 

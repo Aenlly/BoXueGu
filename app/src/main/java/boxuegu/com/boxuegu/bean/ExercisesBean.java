@@ -7,7 +7,9 @@ public class ExercisesBean {
     private String content;
     private int background;//序号背景图片的id
 
-
+    public ExercisesBean() {
+        
+    }
 
     public ExercisesBean(int id, String title, String content, int background) {
         this.id = id;

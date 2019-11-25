@@ -2,11 +2,18 @@ package boxuegu.com.boxuegu.utils;
 
 import android.util.Xml;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.List;
 
 import boxuegu.com.boxuegu.bean.ExercisesDetailBean;
+import boxuegu.com.boxuegu.bean.VideoListBean;
+
 import org.xmlpull.v1.XmlPullParser;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.TypeReference;
 import java.io.InputStream;
 import java.util.ArrayList;
 
@@ -55,6 +62,25 @@ public class AnalysisUtils {
             //往下一行移动并且读取
             type=parse.next();
         }
+        return beans;
+    }
+
+    static public List<VideoListBean> pasarJson(InputStream inputStream) throws Exception {
+        List<VideoListBean> beans;
+
+        BufferedReader reader;
+        StringBuffer sb = null;
+        String line = "";
+        sb = new StringBuffer();
+
+        reader = new BufferedReader(new InputStreamReader(inputStream,"utf-8"));
+        line = reader.readLine();
+        while (line != null) {
+            sb.append(line);
+            sb.append("\n");
+            line=reader.readLine();
+        }
+        beans= JSONObject.parseArray(sb.toString(),VideoListBean.class);
         return beans;
     }
 }

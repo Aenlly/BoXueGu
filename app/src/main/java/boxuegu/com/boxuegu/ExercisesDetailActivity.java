@@ -3,15 +3,12 @@ package boxuegu.com.boxuegu;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.io.InputStream;
 import java.util.List;
 
-import boxuegu.com.boxuegu.R;
 import boxuegu.com.boxuegu.adapter.ExercisesDetailAdapter;
 import boxuegu.com.boxuegu.bean.ExercisesDetailBean;
 import boxuegu.com.boxuegu.utils.AnalysisUtils;

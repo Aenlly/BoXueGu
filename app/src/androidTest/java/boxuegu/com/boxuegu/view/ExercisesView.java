@@ -3,9 +3,7 @@ package boxuegu.com.boxuegu.view;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,11 +25,6 @@ public class ExercisesView{
         ExercisesAdapter adapter=new ExercisesAdapter(dataSoure,context);
         ListView listView=view.findViewById(R.id.lv_list);
         listView.setAdapter(adapter);
-
-
-
-
-
 
     }
 

@@ -18,7 +18,7 @@ import boxuegu.com.boxuegu.bean.ExercisesDetailBean;
 public class ExercisesDetailAdapter extends BaseAdapter {
     private List<ExercisesDetailBean> beans;//题目集合
     private Context context;//上下文
-    private int ivId[]={};
+    private int ivId[]={R.drawable.exercises_b,R.drawable.exercises_c,R.drawable.exercises_d};
 
     public ExercisesDetailAdapter(List<ExercisesDetailBean> beans,Context context) {
         this.context=context;

@@ -4,7 +4,6 @@
     android:orientation="vertical"
     android:background="@drawable/login_bg"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <LinearLayout
         android:id="@+id/top_title_bar"
         android:layout_width="match_parent"
@@ -45,7 +44,7 @@
         android:textColorHint="#a3a3a3"
         android:textSize="14sp"
         android:textColor="#000000"
-        android:drawableLeft="@drawable/user_name_icon"/>
+        android:drawableLeft="@drawable/psw_icon"/>
 
     <Button
         android:id="@+id/btn_login"

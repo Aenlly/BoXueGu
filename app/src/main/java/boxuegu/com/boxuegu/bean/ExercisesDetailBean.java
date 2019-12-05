@@ -9,6 +9,6 @@ public class ExercisesDetailBean {
     public String subject;
     public String a,b,c,d;
     public int answer;//1代表A正确，2代表B正确
-    public int selected;
+    public int selected;//表示用户的选项
 
 }

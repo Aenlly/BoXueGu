@@ -31,6 +31,8 @@ public class ExercisesAdapter extends BaseAdapter {//数据适配器
         return dataSoure.size();
     }
 
+
+
     @Override
     public Object getItem(int position) {
         if (dataSoure==null)  return null;
@@ -71,9 +73,8 @@ public class ExercisesAdapter extends BaseAdapter {//数据适配器
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 //Toast.makeText(context,"即将打开第"+bean.getId()+"章习题内容",Toast.LENGTH_LONG).show();
-                //下面跳转到习题内容界面,并且把标题带过去
+                //下面要跳转到习题内容界面，同时要将章节标题带过去
                 Intent intent=new Intent(context, ExercisesDetailActivity.class);
                 intent.putExtra("id",bean.getId());
                 intent.putExtra("title",bean.getTitle());

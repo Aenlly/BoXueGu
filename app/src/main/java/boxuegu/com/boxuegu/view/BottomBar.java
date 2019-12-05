@@ -150,8 +150,6 @@ public class BottomBar {
         }
     }
 
-
-
     public BottomBar(final AppCompatActivity context){
         this.context=context;
 
@@ -179,7 +177,7 @@ public class BottomBar {
         imageViews[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               switchPage(1);
+                switchPage(1);
             }
         });
 

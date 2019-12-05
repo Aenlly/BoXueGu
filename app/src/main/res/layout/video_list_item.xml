@@ -18,5 +18,4 @@
         android:textColor="#000000"
         android:text="Android系统简介"
         android:layout_gravity="center_vertical"/>
-
 </LinearLayout>

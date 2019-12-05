@@ -27,12 +27,6 @@ public class ExercisesView{
         ExercisesAdapter adapter=new ExercisesAdapter(dataSoure,context);
         ListView listView=view.findViewById(R.id.lv_list);
         listView.setAdapter(adapter);
-
-
-
-
-
-
     }
 
     private void newData(){//为dataSoure添加数据

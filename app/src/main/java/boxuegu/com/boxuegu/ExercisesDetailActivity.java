@@ -21,10 +21,10 @@ public class ExercisesDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercises_detail);
 
-        Intent intent=getIntent();
+        Intent intent=getIntent();//接收跳过来的意图
         int id=intent.getIntExtra("id",-1);
         String title="";
-        if (id!=1){
+        if(id!=-1){
             title=intent.getStringExtra("title");
         }
 
@@ -34,9 +34,9 @@ public class ExercisesDetailActivity extends AppCompatActivity {
         TitleBar titleBar=new TitleBar(this,title);
         exercises_detail_title_bar.addView(titleBar.getView());
 
-        try {
+        try{
             InputStream inputStream=getResources().getAssets().open("chapter"+id+".xml");
-            List<ExercisesDetailBean> beans= AnalysisUtils.getExercisesInfos(inputStream);
+            List<ExercisesDetailBean> beans=AnalysisUtils.getExercisesInfos(inputStream);
 
             ExercisesDetailAdapter adapter=new ExercisesDetailAdapter(beans,this);
 
@@ -44,8 +44,9 @@ public class ExercisesDetailActivity extends AppCompatActivity {
             listView=findViewById(R.id.lv_exercises_detail);
             listView.setAdapter(adapter);
         }catch (Exception e){
-            Toast.makeText(this,"题目文件打开失败或解析失败",Toast.LENGTH_LONG);
+            Toast.makeText(this,"题目文件打开失败或解析失败！",Toast.LENGTH_LONG).show();
             finish();
         }
+
     }
 }

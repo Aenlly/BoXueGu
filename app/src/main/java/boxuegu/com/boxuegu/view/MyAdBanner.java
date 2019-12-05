@@ -62,7 +62,7 @@ public class MyAdBanner {
         LayoutInflater layoutInflater=LayoutInflater.from(context);
         view=layoutInflater.inflate(R.layout.main_adbanner,null);
         initView();
-        
+
     }
 
     private void initView(){
@@ -148,27 +148,24 @@ public class MyAdBanner {
     }
 
 
-    class AdBannerAdapter extends FragmentStatePagerAdapter{
+    class AdBannerAdapter extends FragmentStatePagerAdapter {
         private List<AdBannerFragment> list;
 
-        public AdBannerAdapter(FragmentManager fm,List<AdBannerFragment> list) {
+        public AdBannerAdapter(FragmentManager fm, List<AdBannerFragment> list) {
             super(fm);
-            this.list=list;
+            this.list = list;
         }
 
         @Override
         public int getCount() {
-            if(list==null) return 0;
+            if (list == null) return 0;
             return list.size();
         }
 
         @Override
         public Fragment getItem(int i) {
-            if(list==null) return null;
+            if (list == null) return null;
             return list.get(i);
         }
     }
-
-
-
 }

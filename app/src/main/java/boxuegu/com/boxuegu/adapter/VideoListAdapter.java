@@ -9,12 +9,15 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 import boxuegu.com.boxuegu.R;
 import boxuegu.com.boxuegu.VideoPlayActivity;
 import boxuegu.com.boxuegu.bean.VideoListBean;
+import boxuegu.com.boxuegu.utils.DBAccess;
+import boxuegu.com.boxuegu.utils.ReadWriteSP;
 
 public class VideoListAdapter extends BaseAdapter {
     private List<VideoListBean> beans;
@@ -86,9 +89,21 @@ public class VideoListAdapter extends BaseAdapter {
         current.tv_video_title.setTextColor(Color.parseColor("#009958"));
         old=current;
 
-        Intent intent=new Intent(context, VideoPlayActivity.class);
-        intent.putExtra("videoPath",beans.get(position).videoPath);
-        context.startActivity(intent);
+        String path=beans.get(position).videoPath;
+        if(beans.get(position).videoPath!=null&&!beans.get(position).videoPath.equals("")){//视频存在
+            if(ReadWriteSP.readLoginStatus(context)){//条件成立表示已经登录，播放记录保存到数据库中
+                DBAccess dbAccess=DBAccess.getDBAccessObject(context);
+                dbAccess.saveVideoPlayHistory(ReadWriteSP.getLoginUserName(context),beans.get(position));
+
+            }
+            Intent intent=new Intent(context, VideoPlayActivity.class);
+            intent.putExtra("videoPath",beans.get(position).videoPath);
+            context.startActivity(intent);
+        }else {
+            Toast.makeText(context,"视频不存在",Toast.LENGTH_LONG).show();
+        }
+
+
     }
 
     class ViewHolder{

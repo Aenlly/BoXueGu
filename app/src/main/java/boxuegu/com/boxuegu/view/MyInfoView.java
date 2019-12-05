@@ -12,6 +12,7 @@ import boxuegu.com.boxuegu.LoginActivity;
 import boxuegu.com.boxuegu.MainActivity;
 import boxuegu.com.boxuegu.R;
 import boxuegu.com.boxuegu.SettingActivity;
+import boxuegu.com.boxuegu.VideoPlayHistoryActivity;
 import boxuegu.com.boxuegu.utils.ReadWriteSP;
 
 public class MyInfoView{
@@ -45,7 +46,9 @@ public class MyInfoView{
                 //检查是否已经登录，如果没有登录，则提示没有登录，请登录，如果已经登录，则跳转到播放历史记录界面
                 //因为播放历史记录界面没有设计，则也提示一下
                 if(ReadWriteSP.readLoginStatus(context)){
-                    Toast.makeText(context,"因为播放历史记录界面没有设计，则也提示一下",Toast.LENGTH_LONG).show();
+                    //Toast.makeText(context,"因为播放历史记录界面没有设计，则也提示一下",Toast.LENGTH_LONG).show();
+                    Intent intent=new Intent(context, VideoPlayHistoryActivity.class);
+                    context.startActivity(intent);
                 }else{
                     Toast.makeText(context,"你还没有登录，请点击上面登录",Toast.LENGTH_LONG).show();
                 }

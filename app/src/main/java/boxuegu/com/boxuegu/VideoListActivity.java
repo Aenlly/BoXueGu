@@ -10,7 +10,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 import boxuegu.com.boxuegu.adapter.VideoListAdapter;

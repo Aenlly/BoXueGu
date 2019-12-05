@@ -73,12 +73,12 @@ public class CourseView{
         bean.intro="Intent";
         beans.add(bean);
 
-//        bean=new CourseBean();
-//        bean.id=4;
-//        bean.imgId=R.drawable.banner_1;
-//        bean.imgTitle="423";
-//        bean.title="第4章";
-//        beans.add(bean);
+        /*bean=new CourseBean();
+        bean.id=4;
+        bean.imgId=R.drawable.banner_1;
+        bean.imgTitle="423";
+        bean.title="第4章";
+        beans.add(bean);*/
 
         CourseAdapter adapter=new CourseAdapter(context,beans);
         lv_list.setAdapter(adapter);
@@ -90,3 +90,4 @@ public class CourseView{
         return view;
     }
 }
+

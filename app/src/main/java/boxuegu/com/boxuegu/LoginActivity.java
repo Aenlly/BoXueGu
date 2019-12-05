@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         init();
 
         TitleBar titleBar=new TitleBar(this,"登录");
-        LinearLayout top_title_bar=findViewById(boxuegu.com.boxuegu.R.id.top_title_bar);
+        LinearLayout top_title_bar=findViewById(R.id.top_title_bar);
         top_title_bar.addView(titleBar.getView());
 
         //立即注册控件的点击事件

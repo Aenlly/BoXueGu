@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.Timer;
 import java.util.TimerTask;
 import boxuegu.com.boxuegu.R;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -46,6 +47,6 @@ public class SplashActivity extends AppCompatActivity {
 
 //        timer.schedule(代码，时间);表示当执行这一行时，再过参数2时间，执行参数1代码
         timer.schedule(task,3000);
-        
+
     }
 }

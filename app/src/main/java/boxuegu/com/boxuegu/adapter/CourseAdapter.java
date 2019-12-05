@@ -100,8 +100,6 @@ public class CourseAdapter extends BaseAdapter {
                 context.startActivity(intent);
             }
         });
-
-
         return convertView;
     }
 
@@ -114,3 +112,4 @@ public class CourseAdapter extends BaseAdapter {
         public TextView tv_right_title;
     }
 }
+

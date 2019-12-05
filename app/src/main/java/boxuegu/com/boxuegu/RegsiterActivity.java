@@ -24,7 +24,7 @@ public class RegsiterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_regsiter);
+        setContentView(R.layout.activity_register);
         init();
 
         //返回按钮的单击事件代码

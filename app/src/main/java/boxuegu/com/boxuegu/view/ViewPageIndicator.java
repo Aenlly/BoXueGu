@@ -41,13 +41,8 @@ public class ViewPageIndicator extends LinearLayout {//自定义控件：图片�
         this.mCount=count;
         this.iv=new ImageView[count];
         for(int i=0;i<mCount;i++){
-            iv[i].setPadding(5,0,5,0);
+            iv[i].setPadding(5,0,5,0);//边距左边5，右边5
             addView(iv[i]);
         }
     }
-
-
-
-
-
 }

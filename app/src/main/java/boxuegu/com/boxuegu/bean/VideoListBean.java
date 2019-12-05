@@ -6,5 +6,4 @@ public class VideoListBean {
     public String title;//章的标题
     public String videoTitle;//视频标题
     public String videoPath;//视频地址
-
 }
